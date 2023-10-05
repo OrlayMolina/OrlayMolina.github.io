@@ -1,6 +1,7 @@
 /* Variables */
 :root{
     --color-text-body: #525260;
+    --color-primary: #5956e9;
 }
 
 /* Estilos generales */
@@ -24,13 +25,14 @@ body{
 
 .layout{
     width: 100%;
+    min-width: 1200px;
     height: 100%;
 }
 
 /* Estilos menú navegación */
 .layout__menu{
     width: 100%;
-    padding: 5rem, 9.5rem;
+    padding: 3.5rem 3rem;
 }
 
 .menu__navbar{
@@ -42,7 +44,6 @@ body{
 
 .navbar__logo{
     width: 187px;
-    margin: 20px 20px;
 }
 
 .nav__list{
@@ -54,6 +55,44 @@ body{
 .nav__item{
     position: relative;
     margin: 0px 40px;
+}
+
+.nav__icon{
+    font-size: 1rem;
+    font-weight: bold;
+    padding-left: 0.2rem;
+    vertical-align: middle;
+}
+
+.nav__title{
+    position: relative;
+    display: inline-block;
+    font-weight: 500;
+    color: var(--color-text-body);
+    transition: all 300ms ease-in-out;
+
+}
+
+.nav__title:hover{
+    color: var(--color-primary);
+}
+
+.nav__title::before{
+    content: "";
+    height: 0.2rem;
+    width: 0;
+    background-color: var(--color-primary);
+    position: absolute;
+    bottom: -0.7rem;
+    left: 0;
+    opacity: 0;
+    transition: 500ms;
+
+}
+
+.nav__item:hover::after{
+    width: 100%;
+    opacity: 1;
 }
 
 .nav__submenu{
