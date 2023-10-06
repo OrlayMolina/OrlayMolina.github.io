@@ -30,7 +30,7 @@ function guardarUsuario() {
     let imagen = inputImagen.value;
 
     if (imagen === "") {
-        imagen = ""; // Puedes pegar una URL sencilla aquí
+        imagen = "";
     }
 
     let usuario = new Usuario(
