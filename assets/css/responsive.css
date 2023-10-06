@@ -1,0 +1,104 @@
+@media(min-width: 1600px){
+    .layout{
+        min-width: 1600px;
+    }
+    .layout__menu{
+        padding: 5rem 9.5rem;
+    }
+    .layout__banner{
+        min-height: 85rem;
+        margin: 0 9.5rem;
+        padding-right: 0;
+        padding-left: 50rem;
+        padding-top: 25rem;
+        padding-bottom: 30rem;
+    }
+}
+
+@media(min-width: 1199px) and (max-width: 1400px){
+    .footer__container{
+        max-width: 100%;
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media(max-width: 1200px){
+    .layout{
+        min-width: 990px;
+    }
+
+    .nav__item{
+        margin: 0 2rem;
+    }
+
+    .banner__title{
+        font-size: 6rem;
+    }
+
+    .footer__container{
+        max-width: 96rem;
+    }
+}
+
+@media(max-width: 1000px){
+    .layout{
+        width: auto;
+    }
+
+    .navbar__nav{
+        display: none;
+    }
+
+    .layout__banner{
+        min-height: 90%;
+        margin: 0 3rem;
+    }
+
+    .banner__title{
+        font-size: 5rem;
+    }
+
+    .banner__btn{
+        padding: 2rem 3.5rem;
+    }
+
+    .shapes__item{
+        width: 60%;
+    }
+
+    .footer__container{
+        max-width: 76rem;
+    }
+}
+
+/* Estilos para pantallas con un ancho máximo de 999px */
+@media (max-width: 999px) {
+
+    .layout{
+        min-width: auto;
+    }
+
+    .layout__banner {
+        min-height: 75%;
+        margin: 2rem 3rem;
+        padding: 10rem 3rem;
+    }
+
+    .banner__title {
+        font-size: 5rem;
+    }
+}
+
+/* Estilos para pantallas con un ancho máximo de 770px */
+@media (max-width: 770px) {
+    .layout__banner {
+        margin: 2rem 3rem;
+        padding: 8rem 3rem;
+    }
+
+    .banner__title {
+        font-size: 3rem;
+    }
+
+}
