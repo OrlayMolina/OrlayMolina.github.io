@@ -1,5 +1,5 @@
 let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-// Estos son las referencias a mis inputs
+
 const inputNombreUsuario = document.getElementById("inputNombreUsuario");
 const inputCargo = document.getElementById("inputCargo");
 const inputCorreo = document.getElementById("inputCorreo");
@@ -39,24 +39,19 @@ function guardarUsuario() {
         correo,
         imagen
     );
-    console.log(usuario);
 
     if (indexEditar === null) {
-        console.log("Agregar Usuario");
         usuarios.push(usuario);
     } else {
         usuarios[indexEditar] = usuario;
         indexEditar = null;
-        console.log("Editar Usuario");
     }
     limpiarFormularioUsuarios();
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    console.log("Entró en la función guardar usuario");
     mostrarUsuarios();
 }
 
 function borrarTodo() {
-    console.log("Entró a borrar todo");
     localStorage.clear();
     usuarios = [];
     mostrarUsuarios(); // Corregido el nombre de la función
@@ -65,7 +60,6 @@ function borrarTodo() {
 
 // Tarea: separar en función la lógica de llenar el formulario
 function editarUsuario(index) {
-    console.log("Entró a editar usuario: " + index);
     let usuarioAEditar = usuarios[index];
     inputNombreUsuario.value = usuarioAEditar.nombre;
     inputCargo.value = usuarioAEditar.cargo;
@@ -75,14 +69,13 @@ function editarUsuario(index) {
 }
 
 function eliminarUsuario(index) {
-    console.log("Entró a eliminar usuario: " + index);
     usuarios.splice(index, 1);
     // Guardar en el local storage
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    mostrarUsuarios(); // Corregido el nombre de la función
+    mostrarUsuarios();
 }
 
-function mostrarUsuarios() { // Corregido el nombre de la función
+function mostrarUsuarios() {
     if (usuarios.length === 0) {
         divUsuario.innerHTML = `
         <div class="alert alert-primary" role="alert" id="alertSinUsuarios">
